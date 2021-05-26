@@ -51,7 +51,7 @@ input[type="text"]:focus{
   text-align: center;
   min-width: 350px;
   max-width: 40%;
-  /* display: none; */
+  display: flex;
   flex-direction: column;
   gap: 0.6em;
   position: relative;

@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
 
 const airQualityEmojies = ["😁", "😊", "😐", "😷", "🤢", "💀"];
-export default function WeatherResult({ location, airQuality, temperature, weatherIcon }) {
+export default function WeatherResult({
+  location,
+  airQuality,
+  temperature,
+  weatherIcon,
+}) {
   let [airQualityEmoji, setAirQualityEmoji] = useState("");
   useEffect(() => {
     let newEmoji =
@@ -24,10 +29,10 @@ export default function WeatherResult({ location, airQuality, temperature, weath
       <div className="weather-condition">
         <p>Temperature: {temperature}°C</p>
         <img src={weatherIcon} alt="" className="weather-condition-icon"></img>
-        <div className="air-quality">
-          <p className="air-quality-index">Air Quality Index: {airQuality}</p>
-            <div className="air-quality-icon">{airQualityEmoji}</div>
-        </div>
+      </div>
+      <div className="air-quality">
+        <p className="air-quality-index">Air Quality Index: {airQuality}</p>
+        <div className="air-quality-icon">{airQualityEmoji}</div>
       </div>
     </div>
   );
